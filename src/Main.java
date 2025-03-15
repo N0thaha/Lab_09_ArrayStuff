@@ -38,7 +38,23 @@ public class Main {
                 count++;
             }
         }
-
         System.out.println("The value " + userValue + " was found " + count + " times in the array.");
+
+        int userValue2 = SafeInput.getRangedInt(scanner, "Enter another number between", 1, 100);
+        System.out.println("You entered: " + userValue2);
+
+        int position = -1;
+        for (int i = 0; i < dataPoints.length; i++) {
+            if (dataPoints[i] == userValue2) {
+                position = i;
+                break;
+            }
+        }
+
+        if (position != -1) {
+            System.out.println("The value " + userValue2 + " was found at array index " + position + ".");
+        } else {
+            System.out.println("The value " + userValue2 + " was not found in the array.");
+        }
     }
 }
