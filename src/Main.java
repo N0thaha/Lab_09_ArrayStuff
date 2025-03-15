@@ -31,5 +31,14 @@ public class Main {
 
         int userValue = SafeInput.getRangedInt(scanner, "Enter a number between", 1, 100);
         System.out.println("You entered: " + userValue);
+
+        int count = 0;
+        for (int num : dataPoints) {
+            if (num == userValue) {
+                count++;
+            }
+        }
+
+        System.out.println("The value " + userValue + " was found " + count + " times in the array.");
     }
 }
